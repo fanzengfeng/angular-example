@@ -1,0 +1,6 @@
+
+<input type="text" (input)="onUpdateServerName($event)"  class="form-control">
+<input type="text" [(ngModel)]="serverName" class="form-control">
+<button [disabled]="!allowNewServer" (click)="onCreatedServer()" class="btn btn-primary"> 添加名字</button>
+<p *ngIf="serverCreated">添加用户名:{{serverName}}</p>
+<app-server *ngFor="let server of servers"></app-server>
