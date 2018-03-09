@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <input type="text" class="form-control" #accName>
+    </div>
+    <div class="form-group">
+      <select class="form-control" #status>
+        <option value="active">active</option>
+        <option value="inactive">inactive</option>
+        <option value="unkown">unkown</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" (click)="onCreateAccount(accName.value,status.value)">
+      添加Account
+    </button>
+  </div>
+</div>
