@@ -17,8 +17,8 @@ const appRoutes:Routes = [{
 },{
   path: 'servers',
   component: ServersComponent,
-  // canActivate: [AuthGuardGuard],
-  canActivateChild: [AuthGuardGuard],
+  // canActivate: [AuthGuardGuard],   //守护所有路由
+  canActivateChild: [AuthGuardGuard], //守护子路由
   children: [{
     path: ':id',
     component: ServerComponent,
