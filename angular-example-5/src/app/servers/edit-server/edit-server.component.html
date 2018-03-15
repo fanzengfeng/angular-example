@@ -1,7 +1,7 @@
-<h4 *ngIf="!allowEdit">You're not allowed to edit!</h4>
+<h4 *ngIf="!allowEdit">你不能编辑</h4>
 <div *ngIf="allowEdit">
   <div class="form-group">
-    <label for="name">Server Name</label>
+    <label for="name">服务名称</label>
     <input
       type="text"
       id="name"
@@ -9,16 +9,17 @@
       [(ngModel)]="serverName">
   </div>
   <div class="form-group">
-    <label for="status">Server Status</label>
+    <label for="status">服务状态</label>
     <select
       id="status"
       class="form-control"
       [(ngModel)]="serverStatus">
-      <option value="online">Online</option>
-      <option value="offline">Offline</option>
+      <option value="online">异常</option>
+      <option value="offline">正常</option>
     </select>
   </div>
   <button
     class="btn btn-primary"
-    (click)="onUpdateServer()">Update Server</button>
+    (click)="onUpdateServer()">更新服务</button>
 </div>
+

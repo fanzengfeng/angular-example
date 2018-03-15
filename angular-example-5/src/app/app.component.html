@@ -1,25 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <ul class="nav nav-tabs">
-        <li  class="nav-item" >
-          <a routerLink="/"  class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">主页</a>
+        <li role="presentation"
+            class="nav-item">
+          <a routerLink="/"  routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}" class="nav-link">主页</a>
         </li>
-        <li class="nav-item">
-          <a routerLink="servers" class="nav-link" routerLinkActive="active">服务</a>
+        <li role="presentation"
+            class="nav-item"
+            >
+          <a routerLink="servers" routerLinkActive="active" class="nav-link">服务</a>
         </li>
-        <li class="nav-item">
-          <a [routerLink]="['users']" class="nav-link" routerLink="active">用户</a>
+        <li role="presentation"
+           class="nav-item">
+          <a [routerLink]="['users']"  routerLinkActive="active" class="nav-link">用户</a>
         </li>
       </ul>
     </div>
   </div>
   <div class="row">
-    <div class="row">
-      <div class="col-md-12">
-        <router-outlet></router-outlet>
-      </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
